@@ -4,96 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSE110 Project - Meeting Minutes</title>
-  <!-- 3rd party font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    /* CSS Variables with Fallbacks */
-    :root {
-      --main-bg-color: #f0f4f8;
-      --header-color: #2c3e50;
-      --text-color: #333;
-      --accent-color: #3498db;
-    }
-
-    body {
-      background-color: var(--main-bg-color, #ffffff); /* Fallback color */
-      font-family: 'Roboto', sans-serif;
-      color: var(--text-color, #000000);
-      margin: 1rem; /* Relative unit */
-      padding: 16px; /* Absolute unit */
-    }
-
-    header {
-      background-color: var(--accent-color);
-      color: #fff;
-      text-align: center;
-      padding: 1em 2em; /* Longhand padding */
-      border: 2px solid #2980b9; /* Border shorthand */
-      border-width: 2px; /* Absolute unit */
-    }
-
-    header img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    section {
-      margin: 2em 0; /* Shorthand margin */
-      padding: 1em; /* Shorthand padding */
-      border: 1px dashed #ccc; /* Border shorthand */
-    }
-
-    h1, h2, h3 {
-      color: var(--header-color, #000000);
-    }
-
-    ul, ol {
-      padding-left: 2rem; /* Relative unit */
-    }
-
-    li {
-      margin-bottom: 0.5rem; /* Relative unit */
-    }
-
-    audio, video {
-      display: block;
-      margin-top: 1rem;
-      max-width: 100%;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3em;
-      font-size: 0.875rem; /* Absolute unit */
-      padding: 1rem;
-      border-top: 1px solid #ddd;
-    }
-
-    a:active {
-      color: red;
-    }
-
-    /* Layout with flex */
-    header, footer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 600px) {
-      body {
-        padding: 1em; /* Shorthand padding */
-      }
-
-      video {
-        height: auto;
-        width: 100%;
-      }
-    }
-
-  </style>
 </head>
 <body>
 
@@ -155,11 +65,13 @@
     <h3>Meeting Sound Sample</h3>
     <audio controls>
       <source src="30hz-80mhz-pulse-66949.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
     </audio>
 
     <h3>Meeting Reference Video</h3>
     <video width="640" height="360" controls>
       <source src="4954949-hd_1920_1080_25fps.mp4" type="video/mp4">
+      Your browser does not support the video tag.
     </video>
   </section>
 
@@ -169,7 +81,6 @@
 
 </body>
 </html>
-
 
 
 
