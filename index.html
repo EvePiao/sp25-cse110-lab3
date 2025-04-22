@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CSE110 Project - Meeting Minutes</title>
-  <!-- 3rd party font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
-    /* CSS Variables with Fallbacks */
     :root {
       --main-bg-color: #f0f4f8;
       --header-color: #2c3e50;
@@ -15,32 +13,30 @@
       --accent-color: #3498db;
     }
 
-    body {
-      background-color: var(--main-bg-color, #ffffff); /* Fallback color */
-      font-family: 'Roboto', sans-serif;
-      color: var(--text-color, #000000);
-      margin: 1rem; /* Relative unit */
-      padding: 16px; /* Absolute unit */
+    * {
+      box-sizing: border-box;
     }
 
-    header {
+    body {
+      background-color: var(--main-bg-color, #ffffff);
+      font-family: 'Roboto', sans-serif;
+      color: var(--text-color, #000000);
+      margin: 1rem;
+      padding: 16px;
+    }
+
+    #main-header {
       background-color: var(--accent-color);
       color: #fff;
       text-align: center;
-      padding: 1em 2em; /* Longhand padding */
-      border: 2px solid #2980b9; /* Border shorthand */
-      border-width: 2px; /* Absolute unit */
+      padding: 1em 2em;
+      border: 2px solid #2980b9;
     }
 
-    header img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    section {
-      margin: 2em 0; /* Shorthand margin */
-      padding: 1em; /* Shorthand padding */
-      border: 1px dashed #ccc; /* Border shorthand */
+    .section-block {
+      margin: 2em 0;
+      padding: 1em;
+      border: 1px dashed #ccc;
     }
 
     h1, h2, h3 {
@@ -48,11 +44,21 @@
     }
 
     ul, ol {
-      padding-left: 2rem; /* Relative unit */
+      padding-left: 2rem;
     }
 
     li {
-      margin-bottom: 0.5rem; /* Relative unit */
+      margin-bottom: 0.5rem;
+    }
+
+    [controls] {
+      border: 1px solid #ccc;
+      padding: 0.5em;
+      border-radius: 8px;
+    }
+
+    li:hover {
+      background-color: #e0e0e0;
     }
 
     audio, video {
@@ -61,19 +67,47 @@
       max-width: 100%;
     }
 
-    footer {
+    section ul {
+      list-style-type: disc;
+    }
+
+    header > h1 {
+      font-size: 2rem;
+    }
+
+    h2 ~ ul {
+      font-style: italic;
+    }
+
+    h3 + ul {
+      background-color: #fafafa;
+    }
+
+    p.footer-note {
+      font-size: 0.875rem;
       text-align: center;
-      margin-top: 3em;
-      font-size: 0.875rem; /* Absolute unit */
-      padding: 1rem;
-      border-top: 1px solid #ddd;
+    }
+
+    section:has(ul) {
+      border-left: 5px solid #3498db;
+    }
+
+    section.media {
+      & h3 {
+        color: #34495e;
+        font-weight: bold;
+      }
+
+      & audio, & video {
+        border: 1px solid #ccc;
+        padding: 1rem;
+      }
     }
 
     a:active {
       color: red;
     }
 
-    /* Layout with flex */
     header, footer {
       display: flex;
       flex-direction: column;
@@ -81,10 +115,9 @@
       justify-content: center;
     }
 
-    /* Responsive adjustments */
     @media (max-width: 600px) {
       body {
-        padding: 1em; /* Shorthand padding */
+        padding: 1em;
       }
 
       video {
@@ -92,19 +125,18 @@
         width: 100%;
       }
     }
-
   </style>
 </head>
 <body>
 
-  <header>
+  <header id="main-header">
     <h1>CSE110 Team Project: Productivity App</h1>
     <img src="images.png" alt="CSE110 Project Logo" width="300">
     <h2>Meeting Topic: Brainstorming Session</h2>
     <h3>Date: April 12, 2025</h3>
   </header>
 
-  <section>
+  <section class="section-block">
     <h2>Attendance</h2>
     <ul>
       <li>TianLin Zhao</li>
@@ -114,7 +146,7 @@
     </ul>
   </section>
 
-  <section>
+  <section class="section-block">
     <h2>Agenda</h2>
     <ol>
       <li>Introduce project goals</li>
@@ -123,7 +155,7 @@
     </ol>
   </section>
 
-  <section>
+  <section class="section-block">
     <h2>Unfinished Business</h2>
     <ul>
       <li>Finalize the app's main feature set</li>
@@ -131,7 +163,7 @@
     </ul>
   </section>
 
-  <section>
+  <section class="section-block">
     <h2>New Business</h2>
     <ul>
       <li>Decide on frontend and backend technologies</li>
@@ -140,7 +172,7 @@
     </ul>
   </section>
 
-  <section>
+  <section class="section-block">
     <h2>Comments / Questions / Concerns</h2>
     <ul>
       <li><strong>TianLin:</strong> Should we include a focus timer feature?</li>
@@ -149,7 +181,7 @@
     </ul>
   </section>
 
-  <section>
+  <section class="section-block media">
     <h2>Media from Meeting</h2>
 
     <h3>Meeting Sound Sample</h3>
@@ -164,11 +196,12 @@
   </section>
 
   <footer>
-    <p>Meeting Minutes recorded by TianLin Zhao</p>
+    <p class="footer-note">Meeting Minutes recorded by TianLin Zhao</p>
   </footer>
 
 </body>
 </html>
+
 
 
 
