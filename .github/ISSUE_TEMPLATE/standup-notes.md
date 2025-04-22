@@ -1,8 +1,8 @@
 ---
-name: Standup Notes
+name: standup Notes
 about: Create a standup notes template
 title: add
-labels: ''
+labels: new
 assignees: EvePiao
 
 ---

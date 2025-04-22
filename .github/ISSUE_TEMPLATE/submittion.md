@@ -2,7 +2,7 @@
 name: submittion
 about: Submit the lab
 title: submit
-labels: ''
+labels: other
 assignees: EvePiao
 
 ---
