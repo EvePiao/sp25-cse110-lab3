@@ -1,8 +1,10 @@
 ---
 name: submittion
-about: 
-title: 'submit'
-labels: 'last'
-assignees:
-  - TianLin Zhao
+about: Submit the lab
+title: submit
+labels: ''
+assignees: EvePiao
+
 ---
+
+
